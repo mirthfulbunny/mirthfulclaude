@@ -18,6 +18,10 @@ class Claude:
             max_tokens=1024,
             messages=conversation,
             model="claude-haiku-4-5",
-            system=prompt
+            system=prompt,
+            tools=[{
+                "type": "web_search_20250305",
+                "name": "web_search"
+            }]
         )
 
